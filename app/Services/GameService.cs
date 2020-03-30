@@ -87,6 +87,16 @@ namespace inception.Services
                     Messages.Add("     " + item.Name);
                 }
             }
+            // string exits = string.Join(", ", _game.CurrentRoom.Exits.Keys);
+            // Messages.Add("There are exits to the " + exits);
+
+            // string lockedExits = "";
+            // foreach (var lockedRoom in _game.CurrentRoom.LockedExits.Values)
+            // {
+            //     lockedExits += lockedRoom.Key;
+            // }
+            // Messages.Add("There are locked exits to the " + lockedExits);
+
         }
 
         public void Reset()
@@ -112,16 +122,33 @@ namespace inception.Services
         public void Use(string itemName)
         {
             var found = _game.CurrentPlayer.Inventory.Find(i => i.Name.ToLower() == itemName);
+            var foundInRoom = _game.CurrentRoom.Items.Find(i => i.Name.ToLower() == itemName);
+
             if (found != null)
             {
                 Messages.Add(_game.CurrentRoom.Use(found));
-                return;
+            }
+            else if(itemName == "chain")
+            {
+                    _game.CurrentRoom = _game.CurrentRoom.Exits["switch"];
+                    Look();
+            }else{
+            Messages.Add("You don't have that Item");
             }
             // check if item is in Inventory
-            Messages.Add("You don't have that Item");
+            return;
         }
 
-
+        public bool CrackSafe(string code)
+        {
+            if(code == "1112")
+            {
+                Messages.Add("CONGRATULATION YOU WIN!!!");
+            }else{
+                Messages.Add("Unfortunately that is the wrong password. You blow up.");
+            }
+            return false;
+        }
 
     }
 }

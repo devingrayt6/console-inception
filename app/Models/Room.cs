@@ -5,6 +5,7 @@ namespace inception.Models
 {
     class Room : IRoom
     {
+
         public string Name { get; set; }
         public string Description { get; set; }
         public List<IItem> Items { get; set; }

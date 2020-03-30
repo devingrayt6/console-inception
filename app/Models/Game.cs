@@ -23,20 +23,16 @@ namespace inception.Models
             Room cockPit = new Room("cockpit", "You are in the cockpit with the pilot and co pilot. You realize the pilot is your target and that the co pilot is currently asleep... incepting the pilot will knock him out...");
            
             // Second level Rooms
-            Room produce = new Room("Produce Section", @"
-                 \|/
-                 AXA
-                /XXX\
-                \XXX/
-                 `^'
-            Plenty of Fruit and Veggies, wonder why no on is stockpiling these yet");
-            Room electronics = new Room("Electronics", "Lots of stuff still here, yet no webcams in sight.");
-            Room frozenFoods = new Room("Frozen Foods", "Mostly empty shelves though the vegan chocolate hummus is still in stock for some reason");
-            EndRoom checkout = new EndRoom("Checkout", "A stressed minimum wage employee stares out you with a thousand yard stare, he has seen too much these last few weeks", true, "You breeze through the checkout with your new found wealth!");
-            EndRoom toiletPaperIsle = new EndRoom("Toiletries", "A hoarde of people are racing through this aisle with their weapons out", false, "You are trampled under foot and your name is lost to history");
+            Room darkRoom = new Room("Dark Room", "You are in a dark room and can't see a thing. You do however feel something dangling at about eye level. Feels like a small chain of some type.");
+            Room classRoom = new Room("Class Room", "You seem to be in mr. Yangs old highschool math class. It also seems...you're not wearing pants! How embarrassing! Everyone is laughing at you!! Looks like there's a door to the north...");
+            Room hallWay = new Room("Hall Way", "You are in the Hall Way...There is a door at the end of the hall (east).");
+            Room tvRoom= new Room("tvRoom", "There is a couch in front of you with a man who you recognize as mr. Yang watching television. You look at the TV and realize the movie is about you! You seem to be starring in The Breakfast Club... as the teacher...");
 
+            // Third level Rooms
+            Room safeRoom = new Room("Safe Room", "You are in an empty room that is completely white. Floor, ceiling, walls...All white except for a black safe in the middle. The safe has a keypad with [1][2][3][4]. Type [passcode: <thepasscode>] to crack open the safe!");
+            
             // NOTE Create all Items
-            Item tp = new Item("Toilet Paper", "A Single Roll of precious paper, it must have fallen from a pack");
+            Item chain = new Item("chain", "A small chain that is hanging above your head...");
 
             // NOTE Make Room Relationships
 
@@ -49,23 +45,19 @@ namespace inception.Models
             cockPit.Exits.Add("backward", frontPlane);
 
             // Second Dream Level
-            produce.Exits.Add("east", electronics);
-            electronics.Exits.Add("west", produce);
-            electronics.Exits.Add("north", frozenFoods);
-            electronics.Exits.Add("east", toiletPaperIsle);
-            frozenFoods.Exits.Add("south", electronics);
-
-            frozenFoods.AddLockedRoom(tp, "west", checkout);
-            checkout.Exits.Add("east", frozenFoods);
-
+            darkRoom.Exits.Add("switch", classRoom);
+            classRoom.Exits.Add("north", hallWay);
+            hallWay.Exits.Add("east", tvRoom);
+            hallWay.Exits.Add("south", classRoom);
+            tvRoom.Exits.Add("west", hallWay);
 
             // Set inception relationships
-            cockPit.InceptTo = produce;
+            cockPit.InceptTo = darkRoom;
+            tvRoom.InceptTo = safeRoom;
 
 
             // NOTE put Items in Rooms
-            electronics.Items.Add(tp);
-
+            darkRoom.Items.Add(chain);
 
             CurrentRoom = middlePlane;
         }

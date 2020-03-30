@@ -76,6 +76,9 @@ namespace inception.Controllers
                 case "incept":
                     _running = _gs.Incept();
                     break;
+                case "passcode:":
+                    _running = _gs.CrackSafe(option);
+                    break;
                 case "take":
                     _gs.Take(option);
                     break;

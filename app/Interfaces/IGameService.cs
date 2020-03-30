@@ -15,6 +15,7 @@ namespace inception.Interfaces
         void Look();
         void Take(string itemName);
         void Use(string itemName);
+        bool CrackSafe(string code);
         void Inventory();
         void Help();
         #endregion
