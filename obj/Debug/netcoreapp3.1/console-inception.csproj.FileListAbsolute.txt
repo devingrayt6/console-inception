@@ -1,0 +1,13 @@
+/home/gray/source/dotnet/console-inception/bin/Debug/netcoreapp3.1/console-inception
+/home/gray/source/dotnet/console-inception/bin/Debug/netcoreapp3.1/console-inception.deps.json
+/home/gray/source/dotnet/console-inception/bin/Debug/netcoreapp3.1/console-inception.runtimeconfig.json
+/home/gray/source/dotnet/console-inception/bin/Debug/netcoreapp3.1/console-inception.runtimeconfig.dev.json
+/home/gray/source/dotnet/console-inception/bin/Debug/netcoreapp3.1/console-inception.dll
+/home/gray/source/dotnet/console-inception/bin/Debug/netcoreapp3.1/console-inception.pdb
+/home/gray/source/dotnet/console-inception/obj/Debug/netcoreapp3.1/console-inception.csprojAssemblyReference.cache
+/home/gray/source/dotnet/console-inception/obj/Debug/netcoreapp3.1/console-inception.csproj.CoreCompileInputs.cache
+/home/gray/source/dotnet/console-inception/obj/Debug/netcoreapp3.1/console-inception.AssemblyInfoInputs.cache
+/home/gray/source/dotnet/console-inception/obj/Debug/netcoreapp3.1/console-inception.AssemblyInfo.cs
+/home/gray/source/dotnet/console-inception/obj/Debug/netcoreapp3.1/console-inception.dll
+/home/gray/source/dotnet/console-inception/obj/Debug/netcoreapp3.1/console-inception.pdb
+/home/gray/source/dotnet/console-inception/obj/Debug/netcoreapp3.1/console-inception.genruntimeconfig.cache
