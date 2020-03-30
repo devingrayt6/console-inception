@@ -7,6 +7,7 @@ namespace inception.Models
     {
         
         private string playerName;
+        
         public Player(string playerName)
         {
             Name = playerName;

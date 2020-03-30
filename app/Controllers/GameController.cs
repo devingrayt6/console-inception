@@ -33,6 +33,9 @@ namespace inception.Controllers
             _gs = new GameService(Console.ReadLine());
             _running = true;
 
+            Console.Clear();
+            Print();
+
             while (_running)
             {
                 GetUserInput();
@@ -53,34 +56,37 @@ namespace inception.Controllers
             string option = input.Substring(input.IndexOf(" ") + 1).Trim();//north; toilet paper;''
 
             Console.Clear();
-            // switch (command)
-            // {
-            //     case "quit":
-            //         _running = false;
-            //         break;
-            //     case "reset":
-            //         _gs.Reset();
-            //         break;
-            //     case "look":
-            //         _gs.Look();
-            //         break;
-            //     case "inventory":
-            //         _gs.Inventory();
-            //         break;
-            //     case "go":
-            //         _running = _gs.Go(option);
-            //         break;
-            //     case "take":
-            //         _gs.Take(option);
-            //         break;
-            //     case "use":
-            //         _gs.Use(option);
-            //         break;
-            //     default:
-            //         _gs.Messages.Add("Not a recognized command");
-            //         _gs.Look();
-            //         break;
-            // }
+            switch (command)
+            {
+                case "quit":
+                    _running = false;
+                    break;
+                case "reset":
+                    _gs.Reset();
+                    break;
+                case "look":
+                    _gs.Look();
+                    break;
+                case "inventory":
+                    _gs.Inventory();
+                    break;
+                case "go":
+                    _running = _gs.Go(option);
+                    break;
+                case "incept":
+                    _running = _gs.Incept();
+                    break;
+                case "take":
+                    _gs.Take(option);
+                    break;
+                case "use":
+                    _gs.Use(option);
+                    break;
+                default:
+                    _gs.Messages.Add("Not a recognized command");
+                    _gs.Look();
+                    break;
+            }
         }
 
         public void Print()
