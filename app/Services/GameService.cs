@@ -71,6 +71,8 @@ namespace inception.Services
       Console.WriteLine("[inventory] show what is in your inventory");
       Console.WriteLine("[go <direction>] go towards that direction");
       Console.WriteLine("[help] this...");
+      Console.WriteLine("[incept] Go one dream deeper...must be in same area as target.");
+
 
     }
 
