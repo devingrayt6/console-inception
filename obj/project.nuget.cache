@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5fw7gH8+Mvu41igH8XW83lUm/57Qm6ZyBk8igkR09WdcdJoRTlQFjs0jENfY5ha/yjMtVL7iU0Q9LQYqbdm10w==",
+  "dgSpecHash": "FrwQfOLKdaLUS6PKGdhjriGBwfVOtBoNYWI4lmtfxiwTzWeyuKzLawh08vqe1EwC2ovrZ4SzG94e28q2bsdF0A==",
   "success": true,
-  "projectFilePath": "/home/gray/source/dotnet/console-inception/console-inception.csproj",
+  "projectFilePath": "/home/gray/source/codeworks-dotnet/console-inception/console-inception.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

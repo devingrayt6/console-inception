@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/gray/source/dotnet/console-inception/console-inception.csproj",
+      "projectUniqueName": "/home/gray/source/codeworks-dotnet/console-inception/console-inception.csproj",
       "projectName": "console-inception",
-      "projectPath": "/home/gray/source/dotnet/console-inception/console-inception.csproj",
+      "projectPath": "/home/gray/source/codeworks-dotnet/console-inception/console-inception.csproj",
       "packagesPath": "/home/gray/.nuget/packages/",
-      "outputPath": "/home/gray/source/dotnet/console-inception/obj/",
+      "outputPath": "/home/gray/source/codeworks-dotnet/console-inception/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/gray/.nuget/NuGet/NuGet.Config"
